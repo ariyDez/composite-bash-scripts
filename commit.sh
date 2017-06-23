@@ -16,7 +16,7 @@ cd ./stack-audit-aws-cloudtrail/extends/
 commitFunc ${1}
 echo "Cloudtrail commited"
 
-composites=("cloudwatch" "cloudwatchlogs" "cloudtrail" "config" "ec2" "elb" "iam" "kms" "rds" "redshift" "s3" "sns")
+composites=("cloudwatch" "cloudtrail" "ec2" "elb" "iam" "kms" "rds" "redshift" "s3" "sns")
 compositeLength=${#composites[@]}
 for((i=0; i<${compositeLength}; i++)); do
     cd ../../stack-audit-aws-${composites[i]}/extends
